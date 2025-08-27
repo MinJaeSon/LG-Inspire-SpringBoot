@@ -1,0 +1,17 @@
+spring:
+    application:
+        name: inspire-spring
+
+    # mariadb setting
+    datasource:
+        driver-class-name: org.mariadb.jdbc.Driver
+        url: jdbc:mariadb://${DB_HOST:localhost}:3306/${DB_NAME:inspire}
+        username: ${DB_USER:root}
+        password: ${DB_PASSWORD:}
+
+# mybatis config
+mybatis:
+    mapper-locations: /mappers/**/*Mapper.xml
+
+server:
+    port: 8088
